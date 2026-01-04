@@ -2,62 +2,46 @@
   padding: 2rem 0;
   width: 100%;
   box-sizing: border-box;
+  border: 2px, solid, black;
+  opacity: 80%;
+  background-color: black;
+  border-radius: 10px;
+  margin-top: 5vh;
 }
 
-/* .search-form {
-  max-width: 600px;
-  margin: 0 auto 2rem;
+.introduction {
+  text-align: center;
   display: flex;
-  gap: 1rem;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clear: both;
 }
 
-.search-input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background-color: #333;
-  color: white;
-  font-size: 1rem;
+.experience {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  clear: both;
 }
 
-.search-input:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #666;
+.profilePic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: flex-end;
+  float: right;
 }
 
-.search-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #e50914;
-  color: white;
-  border-radius: 4px;
-  font-weight: 500;
-  transition: background-color 0.2s;
-  white-space: nowrap;
-}
-
-.search-button:hover {
-  background-color: #f40612;
-}
-
-
-@media (max-width: 639px) {
-  .home {
-    padding: 1rem 0;
-  }
-
-  .search-form {
-    margin-bottom: 1rem;
+@media (min-width: 1024px) {
+  .profilePic {
+    justify-content: flex-end;
+    width: 200px;
+    height: 200px;
   }
 }
-
-.movies-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-} */

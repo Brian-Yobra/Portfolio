@@ -1,0 +1,50 @@
+{
+  "profile": [
+    {
+      "name": "Brian Kihara",
+      "title": "Computer Science Student",
+      "institution": "University of Eldoret",
+      "image": "/prof.jpg",
+      "Description": "A fullstack developer"
+    }
+  ],
+  "sections": [
+    {
+      "id": 1,
+      "Category": "Experience",
+      "items": [
+        {
+          "place": "Xeno Co",
+          "role": "Frontend Developer",
+          "timeline": "2025",
+          "description": "Full stack Developer where i build their Portfolio" 
+        }
+      ]
+    },
+        {
+      "id": 2,
+      "Category": "Experience",
+      "items": [
+        {
+          "place": "Xeno Co",
+          "role": "Frontend Developer",
+          "timeline": "2025",
+          "description": "Full stack Developer where i build their Portfolio" 
+        }
+      ]
+    },
+
+    {
+      "id": 100,
+      "Category": "Education",
+      "items": [
+        {
+          "place": "University of Eldoret",
+          "role": "Student",
+          "timeline": "2023-2027",
+          "description": "Study"
+        }
+      ]
+    }
+  ]
+}

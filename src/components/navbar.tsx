@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="nav-brand">
-        <Link to="/">Brian Kihara</Link>
+        <Link to="/">BRIAN KIHARA</Link>
       </div>
       <div className="nav-links">
         <Link to="/" className="nav-link">

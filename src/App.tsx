@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import  React from "react"
 import "./css/App.css";
 import ContactsPage from "./pages/Contacts.tsx";
 import ProjectsPage from "./pages/Project.tsx";

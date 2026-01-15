@@ -1,0 +1,85 @@
+[
+    {
+        "category": "Code Editors",
+        "items": [
+            {
+                "id": 1,
+                "name": "Zed",
+                "description": "Fast, collaborative code editor",
+                "icon": "https://cdn.simpleicons.org/zedindustries/white",
+                "url": "https://zed.dev"
+            }
+        ]
+    },
+    {
+        "category": "Development Tools",
+        "items": [
+            {
+                "id": 2,
+                "name": "Git",
+                "description": "Version control for all projects",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+                "url": "https://git-scm.com"
+            },
+            {
+                "id": 3,
+                "name": "GitHub",
+                "description": "Code hosting and collaboration",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+                "url": "https://github.com"
+            },
+            {
+                "id": 4,
+                "name": "Docker",
+                "description": "Containerization for consistent environments",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+                "url": "https://docker.com"
+            }
+        ]
+    },
+    {
+        "category": "Terminal & CLI",
+        "items": [
+            {
+                "id": 5,
+                "name": "Bash",
+                "description": "Shell scripting and automation",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+                "url": "https://www.gnu.org/software/bash/"
+            },
+            {
+                "id": 6,
+                "name": "tmux",
+                "description": "Terminal multiplexer for managing sessions",
+                "icon": "https://cdn.simpleicons.org/tmux/white",
+                "url": "https://github.com/tmux/tmux"
+            },
+            {
+                "id": 7,
+                "name": "lazygit",
+                "description": "Simple terminal UI for git commands",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+                "url": "https://github.com/jesseduffield/lazygit"
+            },
+            {
+                "id": 8,
+                "name": "lazydocker",
+                "description": "Terminal UI for Docker management",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+                "url": "https://github.com/jesseduffield/lazydocker"
+            }
+        ]
+    },
+    {
+        "category": "UI Design",
+        "items": [
+            {
+                "id": 9,
+                "name": "Figma",
+                "description": "UI/UX design and prototyping",
+                "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+                "url": "https://figma.com"
+            }
+        ]
+    }
+]

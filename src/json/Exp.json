@@ -5,46 +5,71 @@
       "title": "Computer Science Student",
       "institution": "University of Eldoret",
       "image": "/prof.jpg",
-      "Description": "A fullstack developer"
+      "Description": "A fullstack developer specializing in modern web technologies"
     }
   ],
-  "sections": [
+  "experience": [
     {
       "id": 1,
-      "Category": "Experience",
-      "items": [
-        {
-          "place": "Xeno Co",
-          "role": "Frontend Developer",
-          "timeline": "2025",
-          "description": "Full stack Developer where i build their Portfolio" 
-        }
-      ]
+      "place": "Freelance",
+      "role": "Full Stack Developer",
+      "timeline": "2025 - Present",
+      "description": "Building modern web applications for clients using React, Node.js, and various databases.",
+      "logo": "https://cdn.simpleicons.org/freelancer/white"
     },
-        {
-      "id": 2,
-      "Category": "Experience",
-      "items": [
-        {
-          "place": "Xeno Co",
-          "role": "Frontend Developer",
-          "timeline": "2025",
-          "description": "Full stack Developer where i build their Portfolio" 
-        }
-      ]
-    },
-
     {
-      "id": 100,
-      "Category": "Education",
-      "items": [
-        {
-          "place": "University of Eldoret",
-          "role": "Student",
-          "timeline": "2023-2027",
-          "description": "Study"
-        }
-      ]
+      "id": 2,
+      "place": "Personal Projects",
+      "role": "Developer",
+      "timeline": "2023 - Present",
+      "description": "Building side projects to learn new technologies and improve skills.",
+      "logo": "https://cdn.simpleicons.org/github/white"
     }
-  ]
+  ],
+  "education": [
+    {
+      "id": 1,
+      "place": "University of Eldoret",
+      "role": "B.Sc. Computer Science",
+      "timeline": "2023 - 2027",
+      "description": "Studying computer science fundamentals, software engineering, algorithms, and modern development practices.",
+      "logo": "https://cdn.simpleicons.org/academia/white"
+    }
+  ],
+  "skills": {
+    "languages": [
+      {
+        "name": "TypeScript",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        "url": "https://www.typescriptlang.org"
+      },
+      {
+        "name": "Python",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        "url": "https://www.python.org"
+      },
+      {
+        "name": "PostgreSQL",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        "url": "https://www.postgresql.org"
+      }
+    ],
+    "libraries": [
+      {
+        "name": "React",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        "url": "https://react.dev"
+      },
+      {
+        "name": "Django",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+        "url": "https://www.djangoproject.com"
+      },
+      {
+        "name": "FastAPI",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+        "url": "https://fastapi.tiangolo.com"
+      }
+    ]
+  }
 }

@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Portfolio Website",
+        "description": "A modern, responsive portfolio website built with React and TypeScript. Features glassmorphism design, smooth animations, and dark mode.",
+        "tags": [
+            "React",
+            "TypeScript",
+            "CSS"
+        ],
+        "github": "https://github.com/Brian-Yobra/Portfolio",
+        "icon": "https://cdn.simpleicons.org/react/white"
+    },
+    {
+        "id": 2,
+        "title": "Task Manager App",
+        "description": "A full-stack task management application with user authentication, real-time updates, and collaborative features.",
+        "tags": [
+            "React",
+            "Node.js",
+            "MongoDB"
+        ],
+        "github": "https://github.com/Brian-Yobra",
+        "icon": "https://cdn.simpleicons.org/todoist/white"
+    },
+    {
+        "id": 3,
+        "title": "Weather Dashboard",
+        "description": "Real-time weather application that displays current conditions and forecasts using external API integration.",
+        "tags": [
+            "JavaScript",
+            "API",
+            "CSS"
+        ],
+        "github": "https://github.com/Brian-Yobra",
+        "icon": "https://cdn.simpleicons.org/theweatherchannel/white"
+    },
+    {
+        "id": 4,
+        "title": "E-Commerce Platform",
+        "description": "Fully functional e-commerce site with product catalog, shopping cart, and payment integration.",
+        "tags": [
+            "React",
+            "Stripe",
+            "Firebase"
+        ],
+        "github": "https://github.com/Brian-Yobra",
+        "icon": "https://cdn.simpleicons.org/shopify/white"
+    }
+]

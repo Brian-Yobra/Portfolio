@@ -1,5 +1,3 @@
-import "../css/Home.css";
-
 interface Skill {
     name: string;
     icon: string;
@@ -19,11 +17,7 @@ function SkillCard({ skill }: { skill: Skill }) {
             rel="noopener noreferrer"
             className="skill-item glass-card"
         >
-            <img
-                className="skill-icon"
-                src={skill.icon}
-                alt={skill.name}
-            />
+            <img className="skill-icon" src={skill.icon} alt={skill.name} />
             <span className="skill-name">{skill.name}</span>
         </a>
     );
@@ -50,7 +44,7 @@ export function SkillsSection({ skills }: { skills: SkillsData }) {
 
                 {/* Libraries & Tools */}
                 <div className="skills-category">
-                    <h3 className="skills-category-title">Libraries & Tools</h3>
+                    <h3 className="skills-category-title">Libraries &amp; Tools</h3>
                     <div className="skills-grid">
                         {skills.libraries.map((skill) => (
                             <SkillCard key={skill.name} skill={skill} />

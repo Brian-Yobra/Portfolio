@@ -1,5 +1,3 @@
-import "../css/Home.css";
-
 interface ExpItem {
     id: number;
     place: string;

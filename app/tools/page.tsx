@@ -1,5 +1,4 @@
-import "../css/Tools.css";
-import toolsData from "../json/Tools.json";
+import toolsData from "@/data/Tools.json";
 
 interface Tool {
     id: number;
@@ -15,23 +14,31 @@ interface ToolCategory {
 }
 
 function ToolCard({ tool }: { tool: Tool }) {
-    const CardWrapper = tool.url ? "a" : "div";
-    const linkProps = tool.url
-        ? {
-            href: tool.url,
-            target: "_blank",
-            rel: "noopener noreferrer",
-        }
-        : {};
+    if (tool.url) {
+        return (
+            <a
+                href={tool.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tool-card glass-card"
+            >
+                <img className="tool-icon" src={tool.icon} alt={tool.name} />
+                <div className="tool-info">
+                    <h3 className="tool-name">{tool.name}</h3>
+                    <p className="tool-description">{tool.description}</p>
+                </div>
+            </a>
+        );
+    }
 
     return (
-        <CardWrapper className="tool-card glass-card" {...linkProps}>
+        <div className="tool-card glass-card">
             <img className="tool-icon" src={tool.icon} alt={tool.name} />
             <div className="tool-info">
                 <h3 className="tool-name">{tool.name}</h3>
                 <p className="tool-description">{tool.description}</p>
             </div>
-        </CardWrapper>
+        </div>
     );
 }
 

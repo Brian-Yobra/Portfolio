@@ -1,11 +1,13 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "../css/NavBar.css";
+"use client";
 
-export default function NavBar() {
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,13 +17,13 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         <div className="nav-brand">
-          <Link to="/">
+          <Link href="/">
             Brian<span className="highlight">.</span>
           </Link>
         </div>
@@ -38,28 +40,28 @@ export default function NavBar() {
 
         <div className={`nav-links ${isOpen ? "open" : ""}`}>
           <Link
-            to="/"
+            href="/"
             className={`nav-link ${isActive("/") ? "active" : ""}`}
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
-            to="/projects"
+            href="/projects"
             className={`nav-link ${isActive("/projects") ? "active" : ""}`}
             onClick={() => setIsOpen(false)}
           >
             Projects
           </Link>
           <Link
-            to="/tools"
+            href="/tools"
             className={`nav-link ${isActive("/tools") ? "active" : ""}`}
             onClick={() => setIsOpen(false)}
           >
             Tools
           </Link>
           <Link
-            to="/contacts"
+            href="/contacts"
             className={`nav-link ${isActive("/contacts") ? "active" : ""}`}
             onClick={() => setIsOpen(false)}
           >

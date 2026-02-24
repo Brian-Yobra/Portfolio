@@ -17,7 +17,7 @@ export function HeroSection({ profile }: { profile: ProfileData }) {
                     </div>
 
                     <h1 className="hero-title">
-                        Hi, I&apos;m <span className="gradient-text">{profile.name}</span>
+                        Hi, I&apos;m {profile.name}
                     </h1>
 
                     <p className="hero-subtitle">
@@ -34,15 +34,7 @@ export function HeroSection({ profile }: { profile: ProfileData }) {
                         </a>
                     </div>
 
-                    {/* Profile image - uncomment when ready
-          <div className="hero-image">
-            <img
-              className="profile-image"
-              src={profile.image}
-              alt={profile.name}
-            />
-          </div>
-          */}
+                    {}
                 </div>
             </div>
         </section>

@@ -35,7 +35,7 @@ export function ExperienceSection({
     return (
         <section className="experience-section" id="experience">
             <div className="container">
-                {/* Experience */}
+                {}
                 {experience.length > 0 && (
                     <>
                         <div className="section-header">
@@ -51,7 +51,7 @@ export function ExperienceSection({
                     </>
                 )}
 
-                {/* Education */}
+                {}
                 {education.length > 0 && (
                     <>
                         <div className="section-header" style={{ marginTop: "3rem" }}>

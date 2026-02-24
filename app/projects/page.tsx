@@ -83,7 +83,7 @@ export default function ProjectsPage() {
             <div className="container">
                 <div className="projects-header">
                     <h1 className="projects-title">
-                        My <span className="gradient-text">Projects</span>
+                        My Projects
                     </h1>
                     <p className="projects-subtitle">
                         A collection of projects I&apos;ve worked on, showcasing my skills

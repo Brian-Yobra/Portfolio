@@ -48,7 +48,7 @@ export default function ToolsPage() {
             <div className="container">
                 <div className="tools-header">
                     <h1 className="tools-title">
-                        My <span className="gradient-text">Tools</span>
+                        My Tools
                     </h1>
                     <p className="tools-subtitle">
                         The software and tools I use daily to build projects and stay

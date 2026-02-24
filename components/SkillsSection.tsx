@@ -32,7 +32,7 @@ export function SkillsSection({ skills }: { skills: SkillsData }) {
                     <h2 className="section-title">Tech Stack</h2>
                 </div>
 
-                {/* Languages */}
+                {}
                 <div className="skills-category">
                     <h3 className="skills-category-title">Languages</h3>
                     <div className="skills-grid">
@@ -42,7 +42,7 @@ export function SkillsSection({ skills }: { skills: SkillsData }) {
                     </div>
                 </div>
 
-                {/* Libraries & Tools */}
+                {}
                 <div className="skills-category">
                     <h3 className="skills-category-title">Libraries &amp; Tools</h3>
                     <div className="skills-grid">

@@ -4,7 +4,7 @@ export default function ContactsPage() {
             <div className="container">
                 <div className="contacts-header">
                     <h1 className="contacts-title">
-                        Get In <span className="gradient-text">Touch</span>
+                        Get In Touch
                     </h1>
                     <p className="contacts-subtitle">
                         Have a project in mind or want to collaborate? I&apos;d love to hear
@@ -13,7 +13,7 @@ export default function ContactsPage() {
                 </div>
 
                 <div className="contacts-grid">
-                    {/* Contact Form - Formspree */}
+                    { }
                     <div className="contact-form-section glass-card">
                         <form
                             className="contact-form"
@@ -67,7 +67,7 @@ export default function ContactsPage() {
                         </form>
                     </div>
 
-                    {/* Contact Info */}
+                    { }
                     <div className="contact-info-section glass-card">
                         <h3 className="contact-info-title">Contact Information</h3>
 

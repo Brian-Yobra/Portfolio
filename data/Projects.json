@@ -10,5 +10,34 @@
         ],
         "github": "https://github.com/Brian-Yobra/Portfolio",
         "icon": "/favicon.svg"
+    },
+    {
+        "id": 2,
+        "title": "Roadmap",
+        "description": "A modern, responsive roadmap website for creating a flow of to-do tasks.",
+        "tags": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Fastapi",
+            "Python",
+            "PostgreSQL"
+        ],
+        "github": "https://github.com/Brian-Yobra/Roadmap",
+        "icon": ""
+    },
+    {
+        "id": 3,
+        "title": "Savely",
+        "description": "A modern savings app that helps you save money and track your expenses.(Disabled due to API issuesand monetary regulations)",
+        "tags": [
+            "Nextjs",
+            "MPESA API",
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+        ],
+        "github": "https://github.com/stanleynyakundi/Savely-app",
+        "icon": ""
     }
 ]

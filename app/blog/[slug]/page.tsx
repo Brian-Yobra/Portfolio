@@ -1,7 +1,8 @@
-import { getPostBySlug, getAllPosts } from "@/lib/blog";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import CodeCopyInstaller from "@/components/CodeCopyInstaller";
+import { getPostBySlug, getAllPosts } from '@/lib/blog';
+import Link from 'next/link';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import CodeCopyInstaller from '@/components/CodeCopyInstaller';
 
 interface PostPageProps {
   params: Promise<{
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: PostPageProps) {
 
   if (!post) {
     return {
-      title: "Post Not Found",
+      title: 'Post Not Found',
     };
   }
 
@@ -42,22 +43,29 @@ export default async function BlogPostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  const formattedDate = new Date(post.metadata.date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
+  const formattedDate = new Date(post.metadata.date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
   });
 
   return (
     <article className="blog-post-page container">
       <CodeCopyInstaller />
-      <div className="blog-post-back-nav" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <div
+        className="blog-post-back-nav"
+        style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+      >
         <Link href="/blog" className="back-link">
           <span>←</span> Back to Blog
         </Link>
-        <Link href={`/blog/${slug}/edit`} className="btn btn-secondary" style={{ padding: "6px 12px", fontSize: "var(--font-size-xs)" }}>
+        <Link
+          href={`/blog/${slug}/edit`}
+          className="btn btn-secondary"
+          style={{ padding: '6px 12px', fontSize: 'var(--font-size-xs)' }}
+        >
           ✏️ Edit Post
         </Link>
       </div>
@@ -85,16 +93,21 @@ export default async function BlogPostPage({ params }: PostPageProps) {
 
       {post.metadata.coverImage && (
         <div className="blog-post-cover animate-fade-in animate-delay-1">
-          <img src={post.metadata.coverImage} alt={post.metadata.title} />
+          <Image
+            src={post.metadata.coverImage}
+            alt={post.metadata.title}
+            width={1200}
+            height={630}
+            priority
+            style={{ objectFit: 'cover', borderRadius: 'var(--radius-lg)' }}
+            unoptimized={post.metadata.coverImage.startsWith('http')}
+          />
         </div>
       )}
 
       <div className="blog-post-content-container animate-fade-in animate-delay-2">
         <div className="blog-post-content glass-card">
-          <div 
-            className="markdown-body"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }} 
-          />
+          <div className="markdown-body" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
         </div>
       </div>
     </article>

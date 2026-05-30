@@ -1,11 +1,11 @@
 ---
-title: "Building a Modern Next.js Portfolio in 2026"
-date: "2026-05-28"
-description: "A comprehensive walkthrough on how to build a high-performance, glassmorphic portfolio using Next.js App Router, modern CSS variables, and clean structure."
-category: "Web Dev"
-tags: ["Next.js", "React", "CSS Grid", "UI/UX"]
-coverImage: "/blog/nextjs_portfolio.png"
-readingTime: "5 min read"
+title: 'Building a Modern Next.js Portfolio in 2026'
+date: '2026-05-28'
+description: 'A comprehensive walkthrough on how to build a high-performance, glassmorphic portfolio using Next.js App Router, modern CSS variables, and clean structure.'
+category: 'Web Dev'
+tags: ['Next.js', 'React', 'CSS Grid', 'UI/UX']
+coverImage: '/blog/nextjs_portfolio.png'
+readingTime: '5 min read'
 ---
 
 Welcome to my first blog post! In this article, I want to walk you through how I built this portfolio site and migrated it to **Next.js** to achieve stellar performance, seamless client-side page loads, and elegant dark/glass aesthetics.
@@ -91,7 +91,7 @@ export function getPostBySlug(slug: string) {
   const fullPath = path.join(process.cwd(), 'data/posts', `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
-  
+
   return { data, content };
 }
 ```

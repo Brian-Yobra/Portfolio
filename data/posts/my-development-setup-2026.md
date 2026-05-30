@@ -1,11 +1,11 @@
 ---
-title: "My Minimalist Neovim Development Setup"
-date: "2026-05-29"
-description: "A deep dive into my personalized, keyboard-driven coding workspace using Neovim, Tmux, and Alacritty on Linux."
-category: "Tools"
-tags: ["Neovim", "Tmux", "Linux", "Workspace"]
-coverImage: "/blog/neovim_setup.png"
-readingTime: "4 min read"
+title: 'My Minimalist Neovim Development Setup'
+date: '2026-05-29'
+description: 'A deep dive into my personalized, keyboard-driven coding workspace using Neovim, Tmux, and Alacritty on Linux.'
+category: 'Tools'
+tags: ['Neovim', 'Tmux', 'Linux', 'Workspace']
+coverImage: '/blog/neovim_setup.png'
+readingTime: '4 min read'
 ---
 
 A fast, highly tailored, distraction-free environment is one of the greatest investments a software developer can make. In this article, I am sharing my **2026 development workspace**, featuring a minimalist keyboard-driven setup based entirely around terminal workflows.

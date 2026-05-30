@@ -1,5 +1,5 @@
-import { marked } from "marked";
-import { pool, initDb } from "./db";
+import { marked } from 'marked';
+import { pool, initDb } from './db';
 
 export interface PostMetadata {
   title: string;
@@ -28,15 +28,15 @@ function formatAlerts(markdown: string): string {
   return markdown.replace(alertRegex, (match, type, content) => {
     // Clean up content by removing leading '>' and extra spaces
     const cleanContent = content
-      .split("\n")
-      .map((line: string) => line.replace(/^>\s?/, ""))
-      .join("\n");
+      .split('\n')
+      .map((line: string) => line.replace(/^>\s?/, ''))
+      .join('\n');
 
-    let icon = "ℹ️";
-    if (type === "TIP") icon = "💡";
-    if (type === "IMPORTANT") icon = "🔔";
-    if (type === "WARNING") icon = "⚠️";
-    if (type === "CAUTION") icon = "🔥";
+    let icon = `<svg class="alert-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
+    if (type === 'TIP') icon = `<svg class="alert-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M15.09 14c.18-.19.33-.42.44-.67A4.32 4.32 0 0 0 16 11.5a5.5 5.5 0 1 0-11 0c0 .93.2 1.84.59 2.63.11.25.26.48.44.67l1.47 1.7h7.12l1.47-1.7z"></path></svg>`;
+    if (type === 'IMPORTANT') icon = `<svg class="alert-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9zm-12 9a3 3 0 0 0 6 0"></path></svg>`;
+    if (type === 'WARNING') icon = `<svg class="alert-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`;
+    if (type === 'CAUTION') icon = `<svg class="alert-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>`;
 
     return `<div class="alert-box alert-${type.toLowerCase()}">
       <div class="alert-header">
@@ -56,24 +56,24 @@ marked.setOptions({
 
 export async function getAllPosts(): Promise<PostMetadata[]> {
   await initDb();
-  
+
   try {
     const res = await pool.query(
-      "SELECT slug, title, description, category, tags, cover_image, reading_time, created_at FROM blogs ORDER BY created_at DESC"
+      'SELECT slug, title, description, category, tags, cover_image, reading_time, created_at FROM blogs ORDER BY created_at DESC'
     );
 
     return res.rows.map((row) => ({
       slug: row.slug,
       title: row.title,
-      description: row.description || "",
-      category: row.category || "General",
+      description: row.description || '',
+      category: row.category || 'General',
       tags: row.tags || [],
-      coverImage: row.cover_image || "",
-      readingTime: row.reading_time || "3 min read",
-      date: row.created_at ? new Date(row.created_at).toISOString() : "",
+      coverImage: row.cover_image || '',
+      readingTime: row.reading_time || '3 min read',
+      date: row.created_at ? new Date(row.created_at).toISOString() : '',
     }));
   } catch (error) {
-    console.error("Error fetching all posts from database:", error);
+    console.error('Error fetching all posts from database:', error);
     return [];
   }
 }
@@ -83,7 +83,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
   try {
     const res = await pool.query(
-      "SELECT slug, title, description, content, category, tags, cover_image, reading_time, created_at FROM blogs WHERE slug = $1",
+      'SELECT slug, title, description, content, category, tags, cover_image, reading_time, created_at FROM blogs WHERE slug = $1',
       [slug]
     );
 
@@ -102,12 +102,12 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     const metadata: PostMetadata = {
       slug: row.slug,
       title: row.title,
-      description: row.description || "",
-      category: row.category || "General",
+      description: row.description || '',
+      category: row.category || 'General',
       tags: row.tags || [],
-      coverImage: row.cover_image || "",
-      readingTime: row.reading_time || "3 min read",
-      date: row.created_at ? new Date(row.created_at).toISOString() : "",
+      coverImage: row.cover_image || '',
+      readingTime: row.reading_time || '3 min read',
+      date: row.created_at ? new Date(row.created_at).toISOString() : '',
     };
 
     return {
@@ -118,6 +118,19 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   } catch (error) {
     console.error(`Error fetching post ${slug} from database:`, error);
     return null;
+  }
+}
+
+// Function to delete a blog post from the database
+export async function deleteBlogPost(slug: string): Promise<boolean> {
+  await initDb();
+
+  try {
+    const res = await pool.query('DELETE FROM blogs WHERE slug = $1 RETURNING slug', [slug]);
+    return res.rowCount !== null && res.rowCount > 0;
+  } catch (error) {
+    console.error(`Error deleting blog post ${slug} from database:`, error);
+    return false;
   }
 }
 
@@ -147,14 +160,13 @@ export async function createBlogPost(post: {
         post.content,
         post.category,
         post.tags,
-        post.coverImage || "",
-        post.readingTime || "3 min read",
+        post.coverImage || '',
+        post.readingTime || '3 min read',
       ]
     );
     return true;
   } catch (error) {
-    console.error("Error creating/updating blog post in database:", error);
+    console.error('Error creating/updating blog post in database:', error);
     return false;
   }
 }
-

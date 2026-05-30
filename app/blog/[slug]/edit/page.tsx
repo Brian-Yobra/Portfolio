@@ -1,7 +1,7 @@
-import { getPostBySlug } from "@/lib/blog";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import EditBlogPostForm from "./EditForm";
+import { getPostBySlug } from '@/lib/blog';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import BlogForm from '@/components/BlogForm';
 
 interface EditPostPageProps {
   params: Promise<{
@@ -10,8 +10,8 @@ interface EditPostPageProps {
 }
 
 export const metadata = {
-  title: "Edit Blog Post | Brian Kihara",
-  description: "Update and edit existing articles in the PostgreSQL database.",
+  title: 'Edit Blog Post | Brian Kihara',
+  description: 'Update and edit existing articles in the PostgreSQL database.',
 };
 
 export default async function EditBlogPostPage({ params }: EditPostPageProps) {
@@ -34,11 +34,12 @@ export default async function EditBlogPostPage({ params }: EditPostPageProps) {
         <span className="section-label">Editor Mode</span>
         <h1 className="blog-title">Edit Post</h1>
         <p className="blog-subtitle">
-          Make updates to &ldquo;{post.metadata.title}&rdquo;. Changes will be reflected instantly across your portfolio.
+          Make updates to &ldquo;{post.metadata.title}&rdquo;. Changes will be reflected instantly
+          across your portfolio.
         </p>
       </div>
 
-      <EditBlogPostForm post={post} />
+      <BlogForm post={post} />
     </div>
   );
 }

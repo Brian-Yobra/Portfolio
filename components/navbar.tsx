@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import Image from "next/image";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +24,8 @@ export default function Navbar() {
       <div className="navbar-container">
         <div className="nav-brand">
           <Link href="/">
-            Brian<span className="highlight">.</span>
+            <Image src="/favicon.svg" alt="Logo" className="nav-brand-logo" width={40} height={40} />
+            <span>Brian<span className="highlight">.</span></span>
           </Link>
         </div>
 
@@ -61,6 +62,13 @@ export default function Navbar() {
             Tools
           </Link>
           <Link
+            href="/blog"
+            className={`nav-link ${isActive("/blog") ? "active" : ""}`}
+            onClick={() => setIsOpen(false)}
+          >
+            Blog
+          </Link>
+          <Link
             href="/contacts"
             className={`nav-link ${isActive("/contacts") ? "active" : ""}`}
             onClick={() => setIsOpen(false)}
@@ -72,3 +80,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

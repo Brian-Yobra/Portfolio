@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface ProfileData {
     name: string;
     title: string;
@@ -29,9 +31,9 @@ export function HeroSection({ profile }: { profile: ProfileData }) {
                         <a href="#experience" className="btn btn-primary">
                             View My Work
                         </a>
-                        <a href="/contacts" className="btn btn-secondary">
+                        <Link href="/contacts" className="btn btn-secondary">
                             Get In Touch
-                        </a>
+                        </Link>
                     </div>
 
                     {}

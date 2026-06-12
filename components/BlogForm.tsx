@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { submitBlogPost } from '@/app/blog/new/actions';
 import { Post } from '@/lib/blog';
+import MarkdownEditor from '@/components/MarkdownEditor';
 
 interface BlogFormProps {
   post?: Post;
@@ -64,7 +65,7 @@ export default function BlogForm({ post }: BlogFormProps) {
   return (
     <div
       className="contact-form-section glass-card animate-fade-in animate-delay-1"
-      style={{ maxWidth: '800px', margin: '0 auto var(--spacing-3xl)' }}
+      style={{ maxWidth: '1100px', margin: '0 auto var(--spacing-3xl)' }}
     >
       <form onSubmit={handleSubmit} className="contact-form">
         {error && (
@@ -218,17 +219,15 @@ export default function BlogForm({ post }: BlogFormProps) {
 
         <div className="form-group">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <label htmlFor="content" className="form-label">
+            <label className="form-label">
               Content (Markdown Format)
             </label>
             <span style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-accent-primary)' }}>
               Supports standard MD, inline codes, code blocks &amp; GitHub alerts
             </span>
           </div>
-          <textarea
-            id="content"
+          <MarkdownEditor
             name="content"
-            className="form-textarea"
             defaultValue={post?.content || ''}
             placeholder={
               !isEdit
@@ -236,7 +235,6 @@ export default function BlogForm({ post }: BlogFormProps) {
                 : undefined
             }
             required
-            style={{ minHeight: '350px', fontFamily: 'monospace' }}
           />
         </div>
 

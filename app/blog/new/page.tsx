@@ -17,8 +17,8 @@ export default function NewBlogPostPage() {
         <span className="section-label">Creator Studio</span>
         <h1 className="blog-title">Add New Post</h1>
         <p className="blog-subtitle">
-          Write and publish articles with full Markdown styling, custom code highlight blocks, and
-          colored alert boxes.
+          Write and publish articles with live Markdown preview, drag &amp; drop .md file import,
+          code blocks, and GitHub-style alert boxes.
         </p>
       </div>
 

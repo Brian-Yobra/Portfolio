@@ -1,19 +1,30 @@
-// Colors
-$color-bg-primary: #f3f4f6;
-$color-bg-secondary: #ffffff;
-$color-bg-glass: rgba(255, 255, 255, 0.8);
-$color-bg-glass-hover: rgba(255, 255, 255, 1);
+// Colors — Dark background theme with light text
+$color-bg-primary: #0a0d14;        // Deep dark background
+$color-bg-secondary: #141822;      // Slightly lighter card/section background
+$color-bg-glass: rgba(10, 13, 20, 0.8);  // Glass background
+$color-bg-glass-hover: rgba(20, 24, 34, 0.95);
 
-$color-accent-primary: #0a6a4e;
-$color-accent-secondary: #0d8562;
-$color-accent-solid: #0a6a4e; // Solid replacement for the old linear-gradient
+$color-accent-primary: #ffffff;    // Pure white for accents
+$color-accent-secondary: #e2e8f0;  // Off-white for secondary accent
+$color-accent-solid: #ffffff;      // Solid primary white accent
 
-$color-text-primary: #111827;
-$color-text-secondary: #4b5563;
-$color-text-muted: #9ca3af;
+$color-text-primary: #f8fafc;      // Very light text
+$color-text-secondary: #cbd5e1;    // Light grey text
+$color-text-muted: #64748b;        // Slate muted text
 
-$color-border: rgba(0, 0, 0, 0.08);
-$color-border-hover: rgba(10, 106, 78, 0.3);
+$color-border: rgba(255, 255, 255, 0.08);
+$color-border-hover: rgba(255, 255, 255, 0.2);
+
+// Grey button/element tokens (managed in variables)
+$color-btn-bg: #1e293b;            // Slate grey button background
+$color-btn-text: #f8fafc;
+$color-btn-border: rgba(255, 255, 255, 0.08);
+$color-btn-bg-hover: #334155;      // Lighter slate grey hover
+$color-btn-border-hover: rgba(255, 255, 255, 0.2);
+
+// Tag / Badge overlays (managed in variables)
+$color-tag-bg: rgba(255, 255, 255, 0.08);
+$color-tag-text: #f8fafc;
 
 // Fonts
 $font-family:
@@ -52,10 +63,10 @@ $radius-2xl: 1.5rem;
 $radius-full: 9999px;
 
 // Shadows
-$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05);
-$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.05);
-$shadow-glow: 0 0 30px rgba(10, 106, 78, 0.15);
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+$shadow-glow: 0 0 20px rgba(255, 255, 255, 0.04);
 
 // Transitions
 $transition-fast: 150ms ease;
